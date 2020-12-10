@@ -1,4 +1,4 @@
-appname = 'TypeSense'
-version = 0.1
-apptype = 'Alpha'
+APPNAME = 'TypeSense'
+VERSION = 0.1
+APPTYPE = 'Alpha'
 sent_msg = False
