@@ -3,11 +3,12 @@
 Open-Source [S0urce.io](http://s0urce.io) External Bot Project. Used python 3.8.
 
 ## Features
-* AutoType
+Full feature list
 <details>
 
-        * Key Delay  
-        * Return Delay
+* AutoType  
+    * Key Delay  
+    * Return Delay
   
 </details>
 
