@@ -47,7 +47,7 @@ def call(key_delay: float, return_delay: float):
 
     if current_word == '':
         current_word = detect_word()
-        if current_word is '':
+        if current_word == '':
             return
     gv.sent_msg = False
     try:
