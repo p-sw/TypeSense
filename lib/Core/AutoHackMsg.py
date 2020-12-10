@@ -7,6 +7,7 @@ def call():
     if hook.target_msg.is_displayed():
         if not gv.sent_msg:
             hook.target_msg.send_keys('You are hacked by {} {} {}.'.format(gv.APPNAME, gv.VERSION, gv.APPTYPE))
+            sleep(1)
             hook.target_msg_btn.click()
             gv.sent_msg = True
             return
