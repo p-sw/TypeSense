@@ -30,10 +30,10 @@ def hack_available():
 def detect_word():
     global previous_word
     if 'template.png' in get_image_url():
-        return
+        return ''
     if get_image_url() not in word_dictionary:
         logger.warning('Unregistered word image: '+get_image_url())
-        return
+        return ''
     logger.info('Get word '+word_dictionary[get_image_url()])
     return word_dictionary[get_image_url()]
 
@@ -47,7 +47,7 @@ def call(key_delay: float, return_delay: float):
 
     if current_word == '':
         current_word = detect_word()
-        if current_word is None:
+        if current_word is '':
             return
     gv.sent_msg = False
     try:
