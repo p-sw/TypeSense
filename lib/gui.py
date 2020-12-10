@@ -46,8 +46,7 @@ class GUI:
             self.interactive_sprite_group.draw(self.display)
 
             for s_obj in self.interactive_sprite_group:
-                for label in s_obj.get_labels():
-                    self.display.blit(label.get_text(), label.get_rect())
+                s_obj.font_draw(self.display)
 
             self.display.blit(self.CreditLabel.get_text(), self.CreditLabel.get_rect())
 

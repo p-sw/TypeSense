@@ -18,3 +18,6 @@ class Label:
 
     def change_text(self, text):
         self.text = self.font.render(text, True, color.TEXT_COLOR.get(tuple))
+
+    def draw(self, screen):
+        screen.blit(self.text, self.text_rect)

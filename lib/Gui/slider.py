@@ -80,5 +80,6 @@ class Slider(pygame.sprite.Sprite):
             self.image.fill(color.SLIDER_BACKGROUND_DEFAULT_COLOR.get(tuple))
         pygame.draw.rect(self.image, color.SLIDER_FILLED_COLOR.get(tuple), [0, 0, self.level_px, self.rect.height])
 
-    def get_labels(self):
-        return [self.label, self.value_label]
+    def font_draw(self, screen):
+        self.label.draw(screen)
+        self.value_label.draw(screen)

@@ -43,5 +43,5 @@ class Button(pygame.sprite.Sprite):
         if self.enabled:
             pygame.draw.rect(self.image, color.BUTTON_FILLED_COLOR.get(tuple), [2, 2, 11, 11])
 
-    def get_labels(self):
-        return [self.label]
+    def font_draw(self, screen):
+        self.label.draw(screen)
