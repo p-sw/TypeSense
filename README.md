@@ -9,6 +9,7 @@ Full feature list
 * AutoType  
     * Key Delay  
     * Return Delay
+* AutoHackMessage
   
 </details>
 
@@ -40,3 +41,9 @@ Create new issue, and describe what did you do in detail, and error or log messa
 #### I can't open main.py file!
 See [this](https://www.pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/) tutorial and try again.
 If you still can't open main.py, Create new issue. I will help you.
+
+#### This bot type wrong word!
+Then this program's database is outdated. Way to fix is very simple.  
+Go to `TypeSense` program folder, and go inside `tools` folder.  
+Run **Update.py**. Then it will be fixed.  
+If it still not work, or **Update.py** doesn't work, just go [issue tab](https://github.com/sserve-kr/TypeSense/issues) and create new issue.
