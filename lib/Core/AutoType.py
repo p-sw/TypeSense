@@ -2,15 +2,14 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 from lib.Core import hook
 from json import load
-from lib import globalvar as gv
 from lib import logger
+from lib import globalvar as gv
 
 
 with open("png_data\\info.json", "r") as data_file:
     word_dictionary = load(data_file)
 current_word = ''
 previous_word = ''
-sent_msg = False
 
 
 def get_image_url():
@@ -43,11 +42,6 @@ def call(key_delay: float, return_delay: float):
     global current_word, previous_word
 
     typed = hook.input_box.get_attribute('value')
-    if hook.target_msg.is_displayed():
-        hook.target_msg.send_keys('You are hacked by {} {} {}.'.format(gv.appname, gv.version, gv.apptype))
-        hook.target_msg_btn.click()
-        return
-
     if not hack_available():
         return
 
@@ -55,7 +49,7 @@ def call(key_delay: float, return_delay: float):
         current_word = detect_word()
         if current_word is None:
             return
-
+    gv.sent_msg = True
     try:
         if current_word == typed or len(typed) >= len(current_word):
             hook.input_box.send_keys(Keys.RETURN)
