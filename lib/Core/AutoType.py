@@ -32,7 +32,7 @@ def detect_word():
     if 'template.png' in get_image_url():
         return
     if get_image_url() not in word_dictionary:
-        logger.error('Unregistered word image: '+get_image_url())
+        logger.warning('Unregistered word image: '+get_image_url())
         return
     logger.info('Get word '+word_dictionary[get_image_url()])
     return word_dictionary[get_image_url()]
