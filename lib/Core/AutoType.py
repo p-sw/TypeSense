@@ -49,7 +49,7 @@ def call(key_delay: float, return_delay: float):
         current_word = detect_word()
         if current_word is None:
             return
-    gv.sent_msg = True
+    gv.sent_msg = False
     try:
         if current_word == typed or len(typed) >= len(current_word):
             hook.input_box.send_keys(Keys.RETURN)
