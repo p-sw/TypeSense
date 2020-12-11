@@ -44,8 +44,9 @@ class Slider(pygame.sprite.Sprite):
             self.value = self.start_v
         if self.value > self.limit_v:
             self.value = self.limit_v
+        # Do not add draw function here
 
-    def check(self, event_list):
+    def check(self, event_list, screen):
         pos = pygame.mouse.get_pos()
         vnt_type = [event.type for event in event_list]
         if self.rect.x <= pos[0] <= self.rect.topright[0] and self.rect.y <= pos[1] <= self.rect.bottomleft[1]:

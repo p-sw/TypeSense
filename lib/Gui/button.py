@@ -16,7 +16,7 @@ class Button(pygame.sprite.Sprite):
         self.activated = False
         self.label = Label(size, text, self.rect.topright[0] + 2, self.rect.centery)
 
-    def check(self, event_list):
+    def check(self, event_list, screen):
         pos = pygame.mouse.get_pos()
         vnt_type = [event.type for event in event_list]
         if self.rect.x <= pos[0] <= self.rect.topright[0] and self.rect.y <= pos[1] <= self.rect.bottomleft[1]:
