@@ -1,6 +1,6 @@
 APPNAME = 'TypeSense'
 VERSION = 0.1
-APPTYPE = 'Alpha'
+APPTYPE = 'Beta'
 
 
 class GlobalVariables:
