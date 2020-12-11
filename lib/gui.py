@@ -19,7 +19,7 @@ class GUI:
         # GUI Sprite Init
         self.AutoTypeEnable = Button(10, 20, "AutoType", 15)
         self.AutoTypeKeyDelay = Slider(10, 60, 200, "KeyDelay", 15, "s", 0.005, 0.001, 0.5, 3)
-        self.AutoTypeReturnDelay = Slider(10, 100, 200, "ReturnDelay", 15, "s", 0.1, 0.001, 0.5, 3)
+        self.AutoTypeReturnDelay = Slider(10, 100, 200, "ReturnDelay", 15, "s", 0.2, 0.001, 0.5, 3)
         self.AutoHackMsgEnable = Button(10, 130, "AutoHackMessage", 15)
         self.CreditLabel = Label(12, "Made by SSerVe, Build {} {}".format(globalvar.VERSION, globalvar.APPTYPE))
 
