@@ -3,7 +3,7 @@ from time import sleep
 from lib.Core import hook
 from json import load
 from lib import logger
-from lib import globalvar as gv
+from lib.globalvar import GV
 
 
 with open("png_data\\info.json", "r") as data_file:
@@ -49,7 +49,7 @@ def call(key_delay: float, return_delay: float):
         current_word = detect_word()
         if current_word == '':
             return
-    gv.sent_msg = False
+    GV.sent_msg = False
     try:
         if current_word == typed or len(typed) >= len(current_word):
             hook.input_box.send_keys(Keys.RETURN)
