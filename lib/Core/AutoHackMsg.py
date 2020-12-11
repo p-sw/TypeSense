@@ -1,4 +1,3 @@
-from time import sleep
 from lib.Core import hook
 from lib.globalvar import GV
 from lib import globalvar as gv
