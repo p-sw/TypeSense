@@ -43,7 +43,7 @@ class GUI:
             # do draw & update thing
             self.interactive_sprite_group.update()
             for s_obj in self.interactive_sprite_group:
-                s_obj.check(vnt)
+                s_obj.check(vnt, self.display)
 
             self.interactive_sprite_group.draw(self.display)
 

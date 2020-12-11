@@ -38,7 +38,7 @@ class Slider(pygame.sprite.Sprite):
         in_bar_px = pos[0] - self.rect.x
         if self.activated:
             self.value = round(in_bar_px * self.value_per_px, self.decimal_limit)
-            self.value_label.change_text(str(self.value)+self.unit)
+            self.value_label.set_text(str(self.value)+self.unit)
             self.level_px = int(self.value / self.value_per_px)
         if self.value < self.start_v:
             self.value = self.start_v
