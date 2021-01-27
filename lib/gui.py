@@ -12,7 +12,7 @@ class GUI:
     def __init__(self):
         self.stopped = False
         pygame.init()
-        self.display = pygame.display.set_mode((210, 500))
+        self.display = pygame.display.set_mode((400, 500))
         logger.info("Display initialized")
         pygame.display.set_caption(globalvar.APPNAME)
         self.clock = pygame.time.Clock()
