@@ -24,8 +24,8 @@ class GUI:
         self.AutoHackMsgEnable = Checkbox(10, 130, "AutoHackMessage", 15)
         self.AutoTarget = Checkbox(10, 150, "AutoTarget", 15)
         self.TargetPriority = Spinbox(10, 195, 200,
-                                     ["First in player list", "Last in player list", "Random"],
-                                     "Target Priority", 15)
+                                      ["First in player list", "Last in player list", "Random"],
+                                      "Target Priority", 15)
 
         self.CreditLabel = Label(12, "Made by SSerVe, Build {} {}".format(globalvar.VERSION, globalvar.APPTYPE))
         self.CreditLabel.get_rect().centerx = 200
