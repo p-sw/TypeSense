@@ -137,3 +137,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# images
+png_data/
+
+# self
+.gitignore
