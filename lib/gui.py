@@ -1,6 +1,6 @@
 import pygame
 from lib.Gui.Base import color
-from lib.Gui.button import Button
+from lib.Gui.checkbox import Checkbox
 from lib import logger
 from lib.Gui.slider import Slider
 from lib.Gui.label import Label
@@ -18,10 +18,10 @@ class GUI:
         self.clock = pygame.time.Clock()
 
         # GUI Sprite Init
-        self.AutoTypeEnable = Button(10, 20, "AutoType", 15)
+        self.AutoTypeEnable = Checkbox(10, 20, "AutoType", 15)
         self.AutoTypeKeyDelay = Slider(10, 60, 200, "KeyDelay", 15, "s", 0.005, 0.001, 0.5, 3)
         self.AutoTypeReturnDelay = Slider(10, 100, 200, "ReturnDelay", 15, "s", 0.2, 0.001, 0.5, 3)
-        self.AutoHackMsgEnable = Button(10, 130, "AutoHackMessage", 15)
+        self.AutoHackMsgEnable = Checkbox(10, 130, "AutoHackMessage", 15)
         self.SelectionTest = Spinbox(10, 180, 200, ["One", "Two", "Three"], "SelectionTest", 15)
 
         self.CreditLabel = Label(12, "Made by SSerVe, Build {} {}".format(globalvar.VERSION, globalvar.APPTYPE))

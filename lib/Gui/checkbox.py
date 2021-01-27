@@ -4,7 +4,7 @@ from lib import logger
 from lib.Gui.label import Label
 
 
-class Button(pygame.sprite.Sprite):
+class Checkbox(pygame.sprite.Sprite):
     def __init__(self, x: int, y: int, text: str, size: int):
         super().__init__()
         self.image = pygame.Surface([15, 15])
