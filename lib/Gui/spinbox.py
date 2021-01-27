@@ -42,8 +42,6 @@ class Spinbox(pygame.sprite.Sprite):
             self.button_group.remove(self.up_button)
         if 0 < self.item_index < len(self.item_list) - 1:
             self.button_group.add(self.up_button, self.down_button)
-        print(str(self.item_index))
-        print(str(len(self.item_list) - 1))
         self.button_group.update()
         for index, button in enumerate(self.button_group):
             button_clicked = button.check(event_list)
