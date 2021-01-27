@@ -12,7 +12,7 @@ class GUI:
     def __init__(self):
         self.stopped = False
         pygame.init()
-        self.display = pygame.display.set_mode((400, 300))
+        self.display = pygame.display.set_mode((210, 500))
         logger.info("Display initialized")
         pygame.display.set_caption(globalvar.APPNAME)
         self.clock = pygame.time.Clock()
@@ -26,6 +26,10 @@ class GUI:
         self.TargetPriority = Spinbox(10, 195, 200,
                                       ["First in player list", "Last in player list", "Random"],
                                       "Target Priority", 15)
+        self.AutoPort = Checkbox(10, 215, "AutoPort", 15)
+        self.PortSelection = Spinbox(10, 260, 200,
+                                     ["PORT A", 'PORT B', 'PORT C', 'Random'],
+                                     "Port Selection", 15)
 
         self.CreditLabel = Label(12, "Made by SSerVe, Build {} {}".format(globalvar.VERSION, globalvar.APPTYPE))
         self.CreditLabel.get_rect().centerx = 200
