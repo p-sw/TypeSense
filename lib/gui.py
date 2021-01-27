@@ -12,6 +12,8 @@ class GUI:
     def __init__(self):
         self.stopped = False
         pygame.init()
+        self.window_w = 400
+        self.window_h = 500
         self.display = pygame.display.set_mode((400, 500))
         logger.info("Display initialized")
         pygame.display.set_caption(globalvar.APPNAME)
@@ -32,8 +34,8 @@ class GUI:
                                      "Port Selection", 15)
 
         self.CreditLabel = Label(12, "Made by SSerVe, Build {} {}".format(globalvar.VERSION, globalvar.APPTYPE))
-        self.CreditLabel.get_rect().centerx = 200
-        self.CreditLabel.get_rect().centery = 280
+        self.CreditLabel.get_rect().centerx = int(self.window_w / 2)
+        self.CreditLabel.get_rect().centery = self.window_h - 25
 
         self.interactive_sprite_group = pygame.sprite.Group()
         self.interactive_sprite_group.add(self.AutoTypeEnable)
