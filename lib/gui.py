@@ -22,7 +22,10 @@ class GUI:
         self.AutoTypeKeyDelay = Slider(10, 60, 200, "KeyDelay", 15, "s", 0.005, 0.001, 0.5, 3)
         self.AutoTypeReturnDelay = Slider(10, 100, 200, "ReturnDelay", 15, "s", 0.2, 0.001, 0.5, 3)
         self.AutoHackMsgEnable = Checkbox(10, 130, "AutoHackMessage", 15)
-        self.SelectionTest = Spinbox(10, 180, 200, ["One", "Two", "Three"], "SelectionTest", 15)
+        self.AutoTarget = Checkbox(10, 150, "AutoTarget", 15)
+        self.TargetPriority = Spinbox(10, 195, 200,
+                                     ["First in player list", "Last in player list", "Random"],
+                                     "Target Priority", 15)
 
         self.CreditLabel = Label(12, "Made by SSerVe, Build {} {}".format(globalvar.VERSION, globalvar.APPTYPE))
         self.CreditLabel.get_rect().centerx = 200
@@ -33,7 +36,8 @@ class GUI:
         self.interactive_sprite_group.add(self.AutoTypeKeyDelay)
         self.interactive_sprite_group.add(self.AutoTypeReturnDelay)
         self.interactive_sprite_group.add(self.AutoHackMsgEnable)
-        self.interactive_sprite_group.add(self.SelectionTest)
+        self.interactive_sprite_group.add(self.AutoTarget)
+        self.interactive_sprite_group.add(self.TargetPriority)
         logger.info("GUI Initialized")
 
     def run(self):
