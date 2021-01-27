@@ -25,11 +25,11 @@ class GUI:
         self.AutoTypeReturnDelay = Slider(10, 100, 200, "ReturnDelay", 15, "s", 0.2, 0.001, 0.5, 3)
         self.AutoHackMsgEnable = Checkbox(10, 130, "AutoHackMessage", 15)
         self.AutoTarget = Checkbox(10, 150, "AutoTarget", 15)
-        self.TargetPriority = Spinbox(10, 195, 200,
+        self.TargetPriority = Spinbox(10, 185, 200,
                                       ["First in player list", "Last in player list", "Random"],
                                       "Target Priority", 15)
         self.AutoPort = Checkbox(10, 215, "AutoPort", 15)
-        self.PortSelection = Spinbox(10, 260, 200,
+        self.PortSelection = Spinbox(10, 250, 200,
                                      ["PORT A", 'PORT B', 'PORT C', 'Random'],
                                      "Port Selection", 15)
 
