@@ -53,8 +53,8 @@ class Spinbox(pygame.sprite.Sprite):
         self.label.draw(screen)
         self.item_label_list[self.item_index].draw(screen)
 
-    def get_selected_item(self):
-        return self.item_list[self.item_index]
+    def get_selected_index(self):
+        return self.item_index
 
 
 class SpinButton(pygame.sprite.Sprite):
