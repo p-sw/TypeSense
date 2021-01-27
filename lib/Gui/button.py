@@ -33,13 +33,11 @@ class Button(pygame.sprite.Sprite):
                 logger.debug("Button Enabled")
             else:
                 self.image.fill(color.BUTTON_BACKGROUND_HIGHLIGHTED_COLOR.get(tuple))
-        else:
+        elif not self.rect.x <= pos[0] <= self.rect.topright[0] or not self.rect.y <= pos[1] <= self.rect.bottomleft[1]:
             self.image.fill(color.BUTTON_BACKGROUND_DEFAULT_COLOR.get(tuple))
-
-        if not self.rect.x <= pos[0] <= self.rect.topright[0] or not self.rect.y <= pos[1] <= self.rect.bottomleft[1]:
             if self.activated:
                 self.activated = False
-                self.image.fill(color.BUTTON_BACKGROUND_DEFAULT_COLOR.get(tuple))
+
         if self.enabled:
             pygame.draw.rect(self.image, color.BUTTON_FILLED_COLOR.get(tuple), [2, 2, 11, 11])
 

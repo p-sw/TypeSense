@@ -64,14 +64,9 @@ class Slider(pygame.sprite.Sprite):
             else:
                 self.activated = False
                 self.highlighted = True
-        else:
+        elif not self.rect.x <= pos[0] <= self.rect.topright[0] or not self.rect.y <= pos[1] <= self.rect.bottomleft[1]:
             self.activated = False
             self.highlighted = False
-
-        if not self.rect.x <= pos[0] <= self.rect.topright[0] or not self.rect.y <= pos[1] <= self.rect.bottomleft[1]:
-            if self.activated:
-                self.activated = False
-                logger.debug("Slider Deactivated")
 
         if self.activated:
             self.image.fill(color.SLIDER_BACKGROUND_ACTIVATED_COLOR.get(tuple))
