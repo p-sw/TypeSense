@@ -42,6 +42,8 @@ class GUI:
         self.interactive_sprite_group.add(self.AutoHackMsgEnable)
         self.interactive_sprite_group.add(self.AutoTarget)
         self.interactive_sprite_group.add(self.TargetPriority)
+        self.interactive_sprite_group.add(self.AutoPort)
+        self.interactive_sprite_group.add(self.PortSelection)
         logger.info("GUI Initialized")
 
     def run(self):
