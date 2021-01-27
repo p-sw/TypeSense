@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 
 driver = webdriver.Chrome('assets\\driver.exe')
 driver.get("http://s0urce.io")
@@ -11,7 +12,10 @@ input_xpath = '//*[@id="tool-type-word"]'
 word_xpath = '//*[@id="tool-type"]/img'
 target_window_xpath = '//*[@id="window-list"]'
 
-
+login_button = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, 'login-play')))
+while login_button.is_displayed():
+    sleep(3)
+    print('Waiting for log-in...')
 console = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, window_xpath)))
 input_box = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, input_xpath)))
 word_img = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, word_xpath)))
