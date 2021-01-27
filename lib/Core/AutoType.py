@@ -12,37 +12,22 @@ current_word = ''
 previous_word = ''
 
 
-def get_image_url():
-    return hook.word_img.get_attribute('src')
-
-
-def hack_available():
-    if 'template.png' in get_image_url():
-        return False
-    elif not hook.console.is_displayed():
-        return False
-    elif not hook.input_box.is_enabled():
-        return False
-    else:
-        return True
-
-
 def detect_word():
     global previous_word
-    if 'template.png' in get_image_url():
+    if 'template.png' in hook.get_image_url():
         return ''
-    if get_image_url() not in word_dictionary:
-        logger.warning('Unregistered word image: '+get_image_url())
+    if hook.get_image_url() not in word_dictionary:
+        logger.warning('Unregistered word image: '+hook.get_image_url())
         return ''
-    logger.info('Get word '+word_dictionary[get_image_url()])
-    return word_dictionary[get_image_url()]
+    logger.info('Get word '+word_dictionary[hook.get_image_url()])
+    return word_dictionary[hook.get_image_url()]
 
 
 def call(key_delay: float, return_delay: float):
     global current_word, previous_word
 
     typed = hook.input_box.get_attribute('value')
-    if not hack_available():
+    if not hook.hack_available():
         return
 
     if current_word == '':
