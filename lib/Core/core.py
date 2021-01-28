@@ -25,5 +25,4 @@ def loop(gui: GUI):
             if gui.AutoPort.enabled and not AutoPort.port_clicked:
                 AutoPort.call(gui.PortSelection.get_selected_index())
         except selenium_exceptions.WebDriverException as e:
-            logger.warning("Reloading driver due to WebDriverException:{}".format(e))
-            hook.driver = webdriver.Chrome("assets\\driver.exe")
+            logger.warning("Ignoring WebDriverException:{}".format(e))
