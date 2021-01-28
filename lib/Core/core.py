@@ -5,7 +5,7 @@ from lib import logger
 from lib.Core import AutoType
 from lib.Core import AutoHackMsg
 from lib.Core import hook
-from lib.Core import AutoTarget
+# from lib.Core import AutoTarget
 
 
 def loop(gui: GUI):
