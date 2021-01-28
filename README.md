@@ -10,6 +10,21 @@ Full feature list
     * Key Delay  
     * Return Delay
 * AutoHackMessage
+    * AutoHackType
+        * Hacked
+        * Github Link
+        * Just close
+* AutoPort
+    * Port Selection
+        * Port A
+        * Port B
+        * Port C
+        * Random
+* AutoTarget (Does not work, fixing)
+    * Target Selection
+        * First in list
+        * Last in list
+        * Random
   
 </details>
 
