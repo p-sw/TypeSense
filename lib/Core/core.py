@@ -16,7 +16,7 @@ def loop(gui: GUI):
             if gui.AutoTypeEnable.enabled:
                 AutoType.call(gui.AutoTypeKeyDelay.value, gui.AutoTypeReturnDelay.value)
             if gui.AutoHackMsgEnable.enabled:
-                AutoHackMsg.call()
+                AutoHackMsg.call(gui.AutoHackMsgType.get_selected_index())
             """
             if gui.AutoTarget.enabled:
                 AutoTarget.call(gui.TargetPriority.get_selected_index())

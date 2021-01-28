@@ -11,6 +11,7 @@ window_xpath = '//*[@id="window-tool"]'
 input_xpath = '//*[@id="tool-type-word"]'
 word_xpath = '//*[@id="tool-type"]/img'
 target_window_xpath = '//*[@id="window-list"]'
+target_window_close_xpath = '//*[@id="topwindow-success"]/div/div[1]/span'
 
 login_button = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, 'login-play')))
 while login_button.is_displayed():
@@ -21,6 +22,8 @@ input_box = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.X
 word_img = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, word_xpath)))
 target_msg = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, 'targetmessage-input')))
 target_msg_btn = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, 'targetmessage-button-send')))
+target_msg_window_close = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH,
+                                                                                          target_window_close_xpath)))
 target_list = WebDriverWait(driver, 30).until(EC.presence_of_all_elements_located((By.CLASS_NAME,
                                                                                    'window-list-table-select')))
 target_list_window = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, target_window_xpath)))
