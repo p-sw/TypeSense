@@ -32,7 +32,6 @@ portB = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH
 portC = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, '//*[@id="window-other-port3"]')))
 
 
-
 def get_image_url():
     return word_img.get_attribute('src')
 
