@@ -35,6 +35,7 @@ def call(key_delay: float, return_delay: float):
         current_word = detect_word()
         if current_word == '':
             return
+    logger.debug("AutoHackMsg AutoPort Initial")
     AutoHackMsg.sent_msg = False
     AutoPort.port_clicked = False
     try:
