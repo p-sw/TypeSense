@@ -27,6 +27,10 @@ target_msg_window_close = WebDriverWait(driver, 30).until(EC.presence_of_element
 target_list = WebDriverWait(driver, 30).until(EC.presence_of_all_elements_located((By.CLASS_NAME,
                                                                                    'window-list-table-select')))
 target_list_window = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, target_window_xpath)))
+portA = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, '//*[@id="window-other-port1"]')))
+portB = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, '//*[@id="window-other-port2"]')))
+portC = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, '//*[@id="window-other-port3"]')))
+
 
 
 def get_image_url():
