@@ -47,6 +47,7 @@ class Spinbox(pygame.sprite.Sprite):
             button_clicked = button.check(event_list)
             if button_clicked:
                 self.item_index += button.direction
+        self.image.fill(color.SPIN_BACKGROUND_DEFAULT_COLOR.get(tuple))
         self.button_group.draw(self.image)
 
     def font_draw(self, screen):
