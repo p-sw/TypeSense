@@ -23,8 +23,8 @@ class GUI:
         self.AutoTypeEnable = Checkbox(10, 20, "AutoType", 15)
         self.AutoTypeKeyDelay = Slider(10, 60, 200, "KeyDelay", 15, "s", 0.001, 0.001, 0.1, 3)
         self.AutoTypeReturnDelay = Slider(10, 100, 200, "ReturnDelay", 15, "s", 0.2, 0.001, 0.5, 3)
-        self.AutoHackMsgEnable = Checkbox(10, 130, "AutoHackMessage", 15)
-        self.AutoHackMsgType = Spinbox(10, 150, 200,
+        self.AutoHackMsgEnable = Checkbox(10, 140, "AutoHackMessage", 15)
+        self.AutoHackMsgType = Spinbox(10, 175, 200,
                                        ["HACKED", "LINK", "CLOSE"],
                                        "Message Type", 15)
         """
@@ -33,7 +33,7 @@ class GUI:
                                       ["First in player list", "Last in player list", "Random"],
                                       "Target Priority", 15)
         """
-        self.AutoPort = Checkbox(10, 185, "AutoPort", 15)
+        self.AutoPort = Checkbox(10, 215, "AutoPort", 15)
         self.PortSelection = Spinbox(10, 250, 200,
                                      ["PORT A", 'PORT B', 'PORT C', 'Random'],
                                      "Port Selection", 15)
@@ -47,6 +47,7 @@ class GUI:
         self.interactive_sprite_group.add(self.AutoTypeKeyDelay)
         self.interactive_sprite_group.add(self.AutoTypeReturnDelay)
         self.interactive_sprite_group.add(self.AutoHackMsgEnable)
+        self.interactive_sprite_group.add(self.AutoHackMsgType)
         self.interactive_sprite_group.add(self.AutoPort)
         self.interactive_sprite_group.add(self.PortSelection)
         logger.info("GUI Initialized")
