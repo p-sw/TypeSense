@@ -1,4 +1,4 @@
-# TypeSense 0.1 Alpha
+# TypeSense 0.1 Beta
 [![Python](https://img.shields.io/badge/language-Python-%23f34b7d.svg?style=plastic)](https://Python.org)  
 Open-Source [S0urce.io](http://s0urce.io) External Bot Project. Used python 3.8.
 
