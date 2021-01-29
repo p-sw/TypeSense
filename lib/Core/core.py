@@ -1,5 +1,5 @@
 from lib.gui import GUI
-from selenium import webdriver
+# from selenium import webdriver
 from selenium.common import exceptions as selenium_exceptions
 from lib import logger
 from lib.Core import AutoType
