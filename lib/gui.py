@@ -37,7 +37,7 @@ class GUI:
         self.PortSelection = Spinbox(10, 250, 200,
                                      ["PORT A", 'PORT B', 'PORT C', 'Random'],
                                      "Port Selection", 15)
-        self.PortDelay = Slider(10, 270, 200, "AutoPortDelay", 15, "s", 0.1, 1.0, 10.0, 1)
+        self.PortDelay = Slider(10, 290, 200, "AutoPortDelay", 15, "s", 0.1, 1.0, 10.0, 1)
 
         self.CreditLabel = Label(12, "Made by SSerVe, Build {} {}".format(globalvar.VERSION, globalvar.APPTYPE))
         self.CreditLabel.get_rect().centerx = int(self.window_w / 2)
