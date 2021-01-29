@@ -23,6 +23,6 @@ def loop(gui: GUI):
                 AutoTarget.call(gui.TargetPriority.get_selected_index())
             """
             if gui.AutoPort.enabled and not AutoPort.port_clicked:
-                AutoPort.call(gui.PortSelection.get_selected_index())
+                AutoPort.call(gui.PortSelection.get_selected_index(), gui.PortDelay.value)
         except selenium_exceptions.WebDriverException as e:
             logger.warning("Ignoring WebDriverException:{}".format(e))

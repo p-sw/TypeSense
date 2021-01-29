@@ -1,17 +1,18 @@
 from lib.Core import hook
 from lib import logger
 from random import randint
-
+from time import sleep
 
 port_rotate_count = 0
 port_clicked = False
 
 
-def call(t):
+def call(t, d):
     global port_clicked
     if not hook.hack_available() and not port_clicked:
         port = select_port(t)
         if port.is_displayed() and port.is_enabled():
+            sleep(d)
             port.click()
             port_clicked = True
 
