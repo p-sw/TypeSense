@@ -29,7 +29,14 @@ Full feature list
 </details>
 
 ## Getting started
-### Prerequisites
+### Users
+#### Download
+1. Go [Releases](https://github.com/sserve-kr/TypeSense/releases)
+2. Download latest version
+3. Extract it
+4. Run it
+### Contributors
+#### Prerequisites
 1. Install [Python](https://python.org) (Version 3.8 recommended)
 2. Go to python installed folder
 3. Open **CMD** / **Powershell**
@@ -38,14 +45,14 @@ Full feature list
 `pip install selenium` : Required for Web Automation  
 `pip install requests` : Required for Word Update  
 
-### With Git
+#### With Git
 5. Go to the folder where you want to download this project
 6. Open **Git Bash**
 7. Type command: `git clone https://github.com/sserve-kr/TypeSense`
 8. `TypeSense` folder should have been successfully created
 8. Go inside `TypeSense` folder and Open **main.py**
 
-### Without Git
+#### Without Git
 5. To download source code : Click [this link](https://github.com/sserve-kr/TypeSense/archieve/master.zip)
 
 ## FAQ
